@@ -402,7 +402,7 @@ def display_ui(stdscr, btrfs_fs, fs_labels):
 
             # Prevent drawing UI if terminal is too small
             height, width = stdscr.getmaxyx()
-            MIN_HEIGHT = len(uuids) + 4  # Enough to show list without charts
+            MIN_HEIGHT = len(uuids) + 5  # Enough to show list without charts
             if (height < MIN_HEIGHT) or (width < MIN_WIDTH):
                 stdscr.addstr(
                     0, 0, f"Terminal too small (need ≥ {MIN_HEIGHT}x{MIN_WIDTH})."
