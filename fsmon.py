@@ -421,10 +421,13 @@ def display_ui(stdscr, btrfs_fs, fs_labels):
             stdscr.attroff(curses.color_pair(COLOR_FOOTER))
 
             # Determine the maximum label length
-            max_label_len = max(
-                    len(fs_labels[u])
-                    for u in uuids
-            )
+            if use_labels:
+                 max_label_len = max(
+                        len(fs_labels[u])
+                        for u in uuids
+                )
+            else:
+                max_label_len = 36
 
             # Length of fixed columns combined
             fixed_cols = COL_READ_BW + COL_WRITE_BW + COL_IOPS
