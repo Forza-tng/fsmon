@@ -69,8 +69,8 @@ COLOR_HLINE            = 4  # Yellow
 
 # Column widths (label, read, write, iops)
 COL_LABEL    = 12
-COL_READ_BW  = 10
-COL_WRITE_BW = 10
+COL_READ_BW  = 11
+COL_WRITE_BW = 11
 COL_IOPS     = 11
 
 # Minimum allowed terminal size
